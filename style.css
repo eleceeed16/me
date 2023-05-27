@@ -1,0 +1,116 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Header styles */
+  .site-header {
+    background-color: #333;
+    color: #fff;
+    padding: 1px 20px; /* Adjusted padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    animation: fadeInDown 1s both;
+  }
+  
+  .site-header h1 {
+    font-size: 40px;
+  }
+  
+  .menu {
+    display: flex;
+  }
+  
+  .menu-item {
+    margin-left: 30px; /* Increased margin */
+    transition: text-shadow 0.3s ease; /* Added transition effect */
+  }
+  
+  /* Add text shadow on hover and focus */
+  .menu-item:hover,
+  .menu-item:focus {
+    text-shadow: rgba(255,255,255,1) 0px 0px 10px; /* Added text shadow effect */
+  }
+  
+  /* Main styles */
+  main {
+    padding: 30px; /* Adjusted padding */
+    text-align: center;
+    animation: fadeInUp 1s 0.5s both;
+  }
+  
+  .about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .text-container h2 {
+    font-size: 60px; /* Adjusted font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation-delay: 0.5s; /* Animation delay for h2 */
+  }
+  
+  .text-container p {
+    font-size: 30px; /* Adjusted font size */
+    margin-bottom: 20px; /* Added margin */
+    margin-left: auto; /* Centered horizontally */
+    margin-right: auto; /* Centered horizontally */
+    max-width: 800px; /* Adjusted maximum width */
+    animation-delay: 0.5s; /* Animation delay for p */
+    animation-fill-mode: both; /* Retains the final state of the animation */
+  }
+  
+  /* Animation styles */
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  /* Apply final styles after animation */
+  @keyframes retainStyles {
+    to {
+      font-size: 30px; /* Adjusted font size for p */
+    }
+  }
+  
+  .text-container p {
+    animation: retainStyles 0s forwards; /* Apply the final styles immediately after animation */
+  }
+  
+  /* Additional styles for "This is me" */
+  h2.this-is-me {
+    font-size: 60px !important; /* Adjusted font size with !important */
+  }
+  
